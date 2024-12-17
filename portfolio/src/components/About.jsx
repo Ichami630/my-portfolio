@@ -1,29 +1,32 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
+import { ABOUT_TEXT } from '../../constants'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-        <div className='border-b border-neutral-900 pb-4 lg:mb-35' id='about'>
-            <h1 className='text-center text-4xl text-white my-10'>About <span className='bg-gradient-to-r from-primary via-slate-300 to-secondary-200 bg-clip-text text-transparent'>Me</span></h1>
+        <div className='pb-4 border-b border-neutral-900 lg:mb-35' id='about'>
+            <h1 className='my-10 text-4xl text-center text-white'>About <span className='text-transparent bg-gradient-to-r from-primary via-slate-300 to-secondary-200 bg-clip-text'>Me</span></h1>
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2 lg:p-8">
-                    <div className="flex justify-center items-center">
+                    <motion.div
+                    whileInView = {{ x: 0, opacity: 1 }} 
+                    initial = {{ x: -100, opacity: 0 }}
+                    transition = {{ duration: 0.5 }}
+                    className="flex items-center justify-center">
                         <img src={logo} alt="about" />
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="w-full lg:w-1/2">
-                    <div className="flex justify-center lg:justify-start">
-                        <p className='max-w-xl my-2 py-6 overflow-hidden text-neutral-300'>
-                            I am a dedicated and versatile full stack developer with a passion
-                            for creating efficient and user-friendly web applications. With 5 years
-                            of professional experience, I have worked with a variety of technologies, including
-                            React, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with
-                            a deep curiosity for how things work, and it has evolved into a career where I continuously
-                            strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy
-                            solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active,
-                            exploring new technologies, and contributing to open-source projects.
+                    <motion.div
+                    whileInView = {{ x: 0, opacity: 1 }}
+                    initial = {{ opacity: 0, x: 100 }} 
+                    transition = {{ duration: 0.5 }}
+                    className="flex justify-center lg:justify-start">
+                        <p className='max-w-xl py-6 my-2 overflow-hidden text-neutral-300'>
+                            {ABOUT_TEXT}
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
