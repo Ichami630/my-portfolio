@@ -25,7 +25,7 @@ const Technologies = () => {
       whileInView = {{ opacity: 1, y: 0 }}
       initial = {{ opacity: 0, y: -100 }}
       transition = {{ duration: 2.5 }}
-      className="my-10 text-4xl text-center">Skills</motion.h1>
+      className="my-10 text-4xl text-center">Technologies</motion.h1>
       <motion.div
       whileInView = {{ opacity: 1, x: 0 }}
       initial = {{opacity: 0, x: -100}} 
