@@ -3,7 +3,7 @@ import logo from '../assets/images/logo.png'
 
 const About = () => {
   return (
-        <div className='border-b border-neutral-900 pb-4 lg:mb-35'>
+        <div className='border-b border-neutral-900 pb-4 lg:mb-35' id='about'>
             <h1 className='text-center text-4xl text-white my-10'>About <span className='bg-gradient-to-r from-primary via-slate-300 to-secondary-200 bg-clip-text text-transparent'>Me</span></h1>
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2 lg:p-8">

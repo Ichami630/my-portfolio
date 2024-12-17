@@ -3,9 +3,9 @@ import logo from '../assets/images/logo.png'
 
 const Hero = () => {
   return (
-    <div className='border-b border-neutral-900 pb-4 lg:mb-35'>
-        <div className="flex flex-wrap mx-6">
-            <div className="w-full lg:w-1/2 text-neutral-300">
+    <div className='border-b border-neutral-900 pb-4 lg:mb-35 '>
+        <div className="flex flex-wrap ">
+            <div className="w-full lg:w-1/2 ">
                 <div className="flex flex-col items-center lg:items-start">
                     <h1 className="font-thin text-3xl tracking-tight pb-8 lg:mt-16 lg:text-6xl">
                         Brandon Ichami
