@@ -20,11 +20,12 @@ const iconVariants = (duration) => ({
 
 const Technologies = () => {
   return (
-    <div className='pb-4 border-b border-neutral-800 lg:mb-35 lg:pb-14' id="skills">
+    <section className='pb-4 border-b border-neutral-800 lg:mb-35 lg:pb-14' id="skills">
       <motion.h1 
       whileInView = {{ opacity: 1, y: 0 }}
       initial = {{ opacity: 0, y: -100 }}
       transition = {{ duration: 2.5 }}
+      viewport={{once: true}}
       className="my-10 text-4xl text-center">Technologies</motion.h1>
       <motion.div
       whileInView = {{ opacity: 1, x: 0 }}
@@ -74,7 +75,7 @@ const Technologies = () => {
           <SiMysql className='text-7xl text-sky-400' />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   )
 }
 

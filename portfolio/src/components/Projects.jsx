@@ -4,11 +4,12 @@ import { motion } from 'framer-motion'
 
 const Projects = () => {
   return (
-    <div className="pb-4 border-b border-neutral-900 lg:mb-35">
+    <section className="pb-4 border-b border-neutral-900 lg:mb-10">
         <motion.h1 
         whileInView = {{ opacity: 1, y: 0 }}
         initial = {{ opacity: 0, y: -100 }}
         transition = {{ duration: 0.5 }}
+        viewport={{once: true}}
         className="my-10 text-4xl text-center">Projects</motion.h1>
         <div>
             {PROJECTS.map((project,index) => (
@@ -40,7 +41,7 @@ const Projects = () => {
                 </div>
             ))}
         </div>
-    </div>
+    </section>
   )
 }
 

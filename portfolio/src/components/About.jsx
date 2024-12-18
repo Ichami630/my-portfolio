@@ -13,6 +13,7 @@ const About = () => {
                     whileInView = {{ x: 0, opacity: 1 }} 
                     initial = {{ x: -100, opacity: 0 }}
                     transition = {{ duration: 0.5 }}
+                    viewport={{once: true}}
                     className="flex items-center justify-center">
                         <img src={logo} alt="about" />
                     </motion.div>
@@ -22,6 +23,7 @@ const About = () => {
                     whileInView = {{ x: 0, opacity: 1 }}
                     initial = {{ opacity: 0, x: 100 }} 
                     transition = {{ duration: 0.5 }}
+                    viewport={{once: true}}
                     className="flex justify-center lg:justify-start">
                         <p className='max-w-xl py-6 my-2 overflow-hidden text-neutral-300'>
                             {ABOUT_TEXT}
