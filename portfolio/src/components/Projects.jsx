@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Projects = () => {
   return (
-    <section className="pb-4 border-b border-neutral-900 lg:mb-10">
+    <section className="pb-4 border-b border-neutral-900 lg:mb-10" id='projects'>
         <motion.h1 
         whileInView = {{ opacity: 1, y: 0 }}
         initial = {{ opacity: 0, y: -100 }}
@@ -20,11 +20,13 @@ const Projects = () => {
                     transition = {{ duration: 1.5 }}
                     className="w-full lg:w-1/4">
                         <img 
+                            onClick={() => { return window.open(project.url)}}
                             src={project.image} 
                             alt={project.title}
+                            title={`visit ${project.title}`}
                             width={150}
-                            height={150}
-                            className='mb-6 rounded' />
+                            height={100}
+                            className='mb-6 rounded cursor-pointer' />
                     </motion.div>
                     <motion.div 
                     whileInView = {{ opacity: 1, x: 0 }}

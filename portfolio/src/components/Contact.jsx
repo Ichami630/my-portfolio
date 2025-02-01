@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { FaGithub,FaPhone, FaFacebook, FaLinkedinIn, FaSquareXTwitter, FaArrowUp,FaEnvelope } from 'react-icons/fa6'
 import { FaMapMarker } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -20,14 +21,28 @@ const Contact = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        const {name,email,message} = formData;
-        const newContact = {
-            name,
-            email,
-            message
-        }
-        console.log(newContact);
-        toast.success('submitted successfully!!');
+        emailjs.send("service_ukzxi6j","template_kz9qnaf", {
+            from_name: formData.name,
+            to_name: 'Brandon Ichami',
+            message: formData.message,
+            from_email: formData.email,
+            reply_to: formData.email
+        }, "zzabxBmSCzZfvN7EF")
+        .then(() => {
+            toast.success('submitted successfully!!');
+            setFormData({ name: '', email: '', message: '' });
+        })
+
+        .catch((error) => {
+            toast.error('Error sending email. Please try again.');
+            console.error(error);
+        });
+        // const {name,email,message} = formData;
+        // const newContact = {
+        //     name,
+        //     email,
+        //     message
+        // }
     }
   return (
     <section className="relative pb-24 border-b border-neutral-900 lg:mb-10 " id="contact">

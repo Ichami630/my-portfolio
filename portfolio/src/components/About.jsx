@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/logo.png'
+import ichami3 from '../assets/images/ichami3.png'
 import { ABOUT_TEXT } from '../../constants'
 import { motion } from 'framer-motion'
 
@@ -15,7 +15,7 @@ const About = () => {
                     transition = {{ duration: 0.5 }}
                     viewport={{once: true}}
                     className="flex items-center justify-center">
-                        <img src={logo} alt="about" />
+                        <img src={ichami3} height={100} className='rounded-lg' alt="about" />
                     </motion.div>
                 </div>
                 <div className="w-full lg:w-1/2">

@@ -1,7 +1,7 @@
 import React from 'react'
 import {RiReactjsLine, RiPhpLine} from 'react-icons/ri'
 import {SiMongodb,SiMysql} from 'react-icons/si'
-import {FaNodeJs} from 'react-icons/fa'
+import {FaNodeJs,FaWordpress} from 'react-icons/fa'
 import {BiLogoPostgresql} from 'react-icons/bi'
 import { motion } from 'framer-motion'
 
@@ -73,6 +73,13 @@ const Technologies = () => {
         animate = 'animate'
         className="p-4 border rounded-2xl border-neutral-800">
           <SiMysql className='text-7xl text-sky-400' />
+        </motion.div>
+        <motion.div 
+        variants ={ iconVariants(3)}
+        initial = 'initial'
+        animate = 'animate'
+        className="p-4 border rounded-2xl border-neutral-800">
+          <FaWordpress className='text-7xl text-sky-500' />
         </motion.div>
       </motion.div>
     </section>

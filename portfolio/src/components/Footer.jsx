@@ -8,6 +8,16 @@ const iconsFall = (delay) => ({
   whileInView: { opacity: 1, y: 0, transition: { duration: 1.2, delay: delay } }
 });
 
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+      window.scrollTo({
+          top: section.offsetTop,
+          behavior: 'smooth',
+      });
+  }
+};
+
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
@@ -46,9 +56,9 @@ const Footer = () => {
         className="mb-6 md:mb-0">
           <h3 className="mb-2 text-lg font-semibold">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#projects" className="transition duration-300 hover:text-neutral-400 hover:underline">Projects</a></li>
-            <li><a href="#about" className="transition duration-300 hover:text-neutral-400 hover:underline">About Me</a></li>
-            <li><a href="#contact" className="transition duration-300 hover:text-neutral-400 hover:underline">Contact</a></li>
+            <li><button onClick={() => scrollToSection('about')} className="transition duration-300 hover:text-neutral-400 hover:underline">About</button></li>
+            <li><button onClick={() => scrollToSection('skills')} className="transition duration-300 hover:text-neutral-400 hover:underline">Skills</button></li>
+            <li><button onClick={() => scrollToSection('projects')} className="transition duration-300 hover:text-neutral-400 hover:underline">Projects</button></li>
           </ul>
         </motion.div>
 
@@ -112,13 +122,13 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button 
+      {/* <button 
         onClick={scrollToTop} 
         className="fixed p-3 text-white transition duration-300 rounded-full bottom-4 right-4 bg-neutral-700 hover:bg-neutral-600"
         aria-label="Scroll to top"
       >
         <FaArrowUp />
-      </button>
+      </button> */}
     </footer>
   )
 }

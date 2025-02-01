@@ -26,8 +26,8 @@ const Navbar = () => {
             className="flex justify-between py-6 text-center"
         >
             <a className="flex items-center flex-shrink-0">
-                <img src={logo} alt="logo" className="h-10" />
-                <span className="hidden ml-2 text-2xl font-bold md:block">Ichami</span>
+                <img src={logo} alt="logo" className="hidden h-10" />
+                <span className="ml-2 text-2xl font-bold">Ichami</span>
             </a>
             <div className="hidden md:block">
                 <ul className="flex items-center gap-3 text-sm">
@@ -70,9 +70,9 @@ const Navbar = () => {
                 onClick={toggleMenu}
             /> */}
             <motion.button 
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.03 }}
             animate={{
-              y: [0, -5, 0],
+              y: [0, -2, 0],
               transition: {
                 duration: 2,
                 repeat: Infinity,
